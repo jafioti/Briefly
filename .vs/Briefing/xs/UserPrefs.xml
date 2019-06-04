@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{5FCFC4DC-94B2-405E-91B0-EFAC70A3E764}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Briefing/Briefing.Android/MainActivity.cs">
+    <Files>
+      <File FileName="Briefing/Briefing/MainPage.xaml" />
+      <File FileName="Briefing/Briefing.Android/AndroidDependencyService.cs" Line="88" Column="81" />
+      <File FileName="Briefing/Briefing.Android/MainActivity.cs" Line="44" Column="10" />
+      <File FileName="Briefing/Briefing/DependencyInterface.cs" Line="5" Column="6" />
+      <File FileName="Briefing/Briefing/MainPage.xaml.cs" Line="320" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Briefing" expanded="True">
+            <Node name="Briefing" expanded="True">
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="Briefing.Android" expanded="True">
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
+            <Node name="Briefing.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Briefing.Android PreferredExecutionTarget="Android.3959344738573398" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
