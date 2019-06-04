@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Briefing.Travel"
+             Title="Travel Section Setup"
+             BackgroundColor="#3a3a3a">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View"></Style>
+            <Style x:Key="darkThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="darkThemeFrameStyle" TargetType="Frame" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="BorderColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeFrameStyle" TargetType="Frame" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BorderColor" Value="#1E1E1E"></Setter>
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="darkThemeEditorStyle" TargetType="Editor" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeEditorStyle" TargetType="Editor" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="darkThemeDeleteButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+            </Style>
+            <Style x:Key="lightThemeDeleteButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="darkThemeEditButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="Source" Value="lightEdit.png"></Setter>
+            </Style>
+            <Style x:Key="lightThemeEditButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="Source" Value="darkEdit.png"></Setter>
+            </Style>
+            <Style x:Key="lightThemeTimePickerStyle" TargetType="TimePicker" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="darkThemeTimePickerStyle" TargetType="TimePicker" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="20"
+                x:Name="FullTravelStack">
+        <StackLayout
+            x:Name="MainTravelStack"
+            VerticalOptions="FillAndExpand">
+        </StackLayout>
+                <StackLayout
+                    x:Name="AddButtonTravelStack">
+                    
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

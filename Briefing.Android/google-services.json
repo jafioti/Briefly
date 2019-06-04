@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "868276222444",
+    "firebase_url": "https://briefing-1554659259817.firebaseio.com",
+    "project_id": "briefing-1554659259817",
+    "storage_bucket": "briefing-1554659259817.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868276222444:android:716ff8a2c4ea0f5c",
+        "android_client_info": {
+          "package_name": "com.companyname.Briefing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868276222444-rk9uq2o9n199nfkvp6viams3pqgt6sf6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.Briefing",
+            "certificate_hash": "cd6e0aca1022e9aa1988417505df31803965be47"
+          }
+        },
+        {
+          "client_id": "868276222444-d1hhv11bpu1rao5g3mcsndl7i4rg7ijf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGNQJYHMIlUzKdlDy4RcmiqvzErKTA4Xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868276222444-d1hhv11bpu1rao5g3mcsndl7i4rg7ijf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

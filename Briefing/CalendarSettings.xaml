@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Briefing.CalendarSettings"
+             Title="Calendar Section Setup"
+             BackgroundColor="#3a3a3a">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View"></Style>
+            <Style x:Key="darkThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="lightThemeRefreshStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="Source" Value="darkrefresh.png"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="WidthRequest" Value="40"></Setter>
+            </Style>
+            <Style x:Key="darkThemeRefreshStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="Source" Value="lightrefresh.png"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="WidthRequest" Value="40"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout
+            x:Name="MainCalendarSettingsStack"
+            Padding="10">
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

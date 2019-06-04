@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Briefing.MainPage"
+             Title="Briefing"
+             BackgroundColor="#3a3a3a"
+             NavigationPage.HasNavigationBar="True"
+             Appearing="OnAppearing"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="play.png" Text="Settings" Clicked="PlayBriefing" x:Name="PlayButton"/>
+        <ToolbarItem Icon="settings.png" Text="Settings" Clicked="OpenSettings"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View"></Style>
+            <Style x:Key="darkThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="lightThemeLineStyle" TargetType="Image" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="Source" Value="darkbigline.png"></Setter>
+            </Style>
+            <Style x:Key="darkThemeLineStyle" TargetType="Image" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="Source" Value="lightbigline.png"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView
+            x:Name="MainScrollLayout">
+            <StackLayout Padding="0"
+                         HorizontalOptions="StartAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         x:Name="FullStackLayout">
+                <AbsoluteLayout
+                    HeightRequest="300"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    x:Name="StartAbsoluteLayout">
+                    
+                </AbsoluteLayout>
+                <StackLayout
+                    x:Name="LoadingStack"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="300"
+                    Padding="15"
+                    ></StackLayout>
+                    <StackLayout
+                    Padding="20"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    x:Name="MainStackLayout">
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

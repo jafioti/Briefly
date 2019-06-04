@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Briefing.Settings"
+             Title="Settings"
+             BackgroundColor="#3a3a3a">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View"></Style>
+            <Style x:Key="darkThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="lightThemeEditorStyle" TargetType="Editor" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="darkThemeEditorStyle" TargetType="Editor" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeFrameStyle" TargetType="Frame" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="BorderColor" Value="#3a3a3a"></Setter>
+            </Style>
+            <Style x:Key="darkThemeFrameStyle" TargetType="Frame" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="BorderColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeUpArrowStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="Source" Value="darkuparrow.png"></Setter>
+                <Setter Property="HeightRequest" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+            <Style x:Key="darkThemeUpArrowStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="Source" Value="uparrow.png"></Setter>
+                <Setter Property="HeightRequest" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+            <Style x:Key="lightThemeDownArrowStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="Source" Value="darkdownarrow.png"></Setter>
+                <Setter Property="HeightRequest" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+            <Style x:Key="darkThemeDownArrowStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="Source" Value="downarrow.png"></Setter>
+                <Setter Property="HeightRequest" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+            <Style x:Key="lightThemeSettingsStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="Source" Value="darksettings.png"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="WidthRequest" Value="40"></Setter>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+            <Style x:Key="darkThemeSettingsStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="Source" Value="settings.png"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="WidthRequest" Value="40"></Setter>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+            Padding="20"
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="FillAndExpand"
+            x:Name="MainSettingsStack">
+                
+                <Label
+                Text="Your Name"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Style="{DynamicResource labelStyle}">
+                </Label>
+                <Editor
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="500"
+                FontSize="Large"
+                x:Name="UserNameEditor"
+                TextChanged="OnUserNameTextChanged"
+                Style="{DynamicResource editorStyle}"></Editor>
+                <Label
+                Text="Theme"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Style="{DynamicResource labelStyle}">
+                </Label>
+                <StackLayout Orientation="Horizontal"
+                             HeightRequest="50"
+                             HorizontalOptions="FillAndExpand"
+                             x:Name="SunsetThemeStack">
+                    
+                </StackLayout>
+                <Frame
+                    CornerRadius="20"
+                    BackgroundColor="#333333"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="30"
+                    BorderColor="White">
+                    <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="40">
+                        <Label
+                        Text="Dark Mode"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="Large"
+                        TextColor="White"
+                        ></Label>
+                        <Switch
+                        x:Name="DarkModeSwitch"
+                        IsToggled="True"
+                        Toggled="ToggleTheme"></Switch>
+                    </StackLayout>
+                </Frame>
+                <!--Information Order-->
+                <Label Text="Information Order"
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       HorizontalOptions="StartAndExpand"
+                       Style="{DynamicResource labelStyle}"></Label>
+                <StackLayout Padding="0"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             x:Name="MainInfoStack"></StackLayout>
+                
+                <Label
+                Text="Google Sign In"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                Style="{DynamicResource labelStyle}"
+                x:Name="GoogleLoginLabel">
+                </Label>
+                <Button x:Name="GoogleLoginButton"
+                Text="Login To Google"
+                FontSize="Medium"
+                BackgroundColor="#2D5DCC"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="60"
+                CornerRadius="20"
+                Clicked="LoginToGoogle"
+                ></Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

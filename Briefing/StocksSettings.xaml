@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Briefing.StocksSettings"
+             Title="Stocks Section Setup"
+             BackgroundColor="#3a3a3a">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View"></Style>
+            <Style x:Key="darkThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="lightThemeButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="darkThemeButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout
+            Padding="10"
+            x:Name="FullStockSettingsStack">
+            <Label Text="Stocks"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   Style="{DynamicResource labelStyle}"></Label>
+            <StackLayout
+                x:Name="MainStockSettingsStack"
+                Padding="10">
+                
+            </StackLayout>
+            <Frame HorizontalOptions="FillAndExpand"
+                   HeightRequest="50"
+                   BackgroundColor="#333333"
+                   BorderColor="White"
+                   CornerRadius="20">
+                <StackLayout Orientation="Horizontal"
+                             HeightRequest="50"
+                             HorizontalOptions="FillAndExpand">
+                    <Editor x:Name="AddStocksEditor"
+                            FontSize="Large"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            TextColor="White"></Editor>
+                    <Button Text="Add Stock"
+                            BackgroundColor="#006EFF"
+                            HorizontalOptions="Start"
+                            CornerRadius="20"
+                            FontSize="Medium"
+                            Padding="8"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand"
+                            Clicked="AddStock"></Button>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Briefing.WeatherSettings"
+             Title="Weather Section Setup"
+             BackgroundColor="#3a3a3a">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View"></Style>
+            <Style x:Key="darkThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style x:Key="lightThemeLabelStyle" TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#1E1E1E"></Setter>
+            </Style>
+            <Style x:Key="darkThemeSearchButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="#3a3a3a"></Setter>
+                <Setter Property="Source" Value="lightSearch.png"></Setter>
+            </Style>
+            <Style x:Key="lightThemeSearchButtonStyle" TargetType="ImageButton" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="Source" Value="darkSearch.png"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Orientation="Vertical"
+                     Padding="10">
+        <StackLayout
+            x:Name="MainWeatherSettingsStack"
+            Orientation="Vertical">
+            
+        </StackLayout>
+            <Label Text="Custom Location"
+                   x:Name="CustomWeatherLocationTitle"
+                   HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   Style="{DynamicResource labelStyle}"></Label>
+            <Label Text="None"
+                   x:Name="CustomWeatherLocation"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"
+                   Style="{DynamicResource labelStyle}"></Label>
+            <Frame HorizontalOptions="FillAndExpand"
+                   HeightRequest="50"
+                   Padding="8"
+                   BackgroundColor="White"
+                   BorderColor="White"
+                   CornerRadius="20"
+                   x:Name="CustomLocationFrame">
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand">
+                    <Editor x:Name="customLocationEditor"
+                            FontSize="Large"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            TextColor="#3a3a3a"></Editor>
+                    <ImageButton
+                        Source="darkSearch.png"
+                        BackgroundColor="White"
+                        HeightRequest="35"
+                        HorizontalOptions="Start"
+                        x:Name="CustomLocationSeachButton"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="SearchButton_Clicked"></ImageButton>
+                </StackLayout>
+            </Frame>
+                <StackLayout Orientation="Vertical"
+                         Padding="0"
+                         HorizontalOptions="FillAndExpand"
+                         x:Name="WeatherLocationsStack"></StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

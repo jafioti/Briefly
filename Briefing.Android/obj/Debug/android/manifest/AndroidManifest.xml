@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.fiotech.Briefly" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="27" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-feature android:name="android.hardware.location.gps" />
+  <uses-feature android:name="android.hardware.location.network" />
+  <application android:label="Briefing.Android" android:icon="@drawable/clipboard" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="GoogleLoginActivity" android:launchMode="singleTask" android:noHistory="true" android:name="md544ac629b36cf1749f77354596739ac08.GoogleLoginActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:path="/oauth2redirect" />
+        <data android:scheme="com.googleusercontent.apps.868276222444-rk9uq2o9n199nfkvp6viams3pqgt6sf6" />
+      </intent-filter>
+    </activity>
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/clipboard" android:label="Briefing" android:name="com.companyname.Briefing.MainActivity" android:screenOrientation="portrait" android:theme="@style/MainTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <receiver android:name="md544ac629b36cf1749f77354596739ac08.MediaButtonReciever">
+      <intent-filter>
+        <action android:name="android.intent.action.MEDIA_BUTTON" />
+      </intent-filter>
+    </receiver>
+    <activity android:label="TodoistLoginActivity" android:launchMode="singleTask" android:noHistory="true" android:name="md544ac629b36cf1749f77354596739ac08.TodoistLoginActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:path="//oauth.redirect/" />
+        <data android:scheme="briefing" />
+      </intent-filter>
+    </activity>
+    <receiver android:enabled="true" android:exported="false" android:label="Connectivity Plugin Broadcast Receiver" android:name="md59628c2715c1bb8febcc7ae8402df0582.ConnectivityChangeBroadcastReceiver" />
+    <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
+    <activity android:label="Web Authenticator" android:name="md5538102cb7512c6dba0c04fe6c395414e.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md5538102cb7512c6dba0c04fe6c395414e.WebAuthenticatorActivity" />
+    <activity android:label="@string/title_activity_webview" android:theme="@android:style/Theme.DeviceDefault" android:name="md5538102cb7512c6dba0c04fe6c395414e.WebViewActivity" />
+    <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5538102cb7512c6dba0c04fe6c395414e.WebAuthenticatorNativeBrowserActivity" />
+    <receiver android:name="md5538102cb7512c6dba0c04fe6c395414e.CustomTabsActionsBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:name="md51558244f76c53b6aeda52c8a337f2c37.PowerSaveModeBroadcastReceiver" />
+    <activity android:name="md5ffa21440d43fa9f7b0ce3fc2ebd14867.MediaPickerActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.fiotech.Briefly.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.fiotech.Briefly" />
+      </intent-filter>
+    </receiver>
+    <activity android:name="net.openid.appauth.AuthorizationManagementActivity" android:exported="false" android:launchMode="singleTask" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity android:name="net.openid.appauth.RedirectUriReceiverActivity" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="${appAuthRedirectScheme}" />
+      </intent-filter>
+    </activity>
+    <provider android:authorities="com.fiotech.Briefly.firebaseinitprovider" android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:initOrder="100" />
+    <activity android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:excludeFromRecents="true" android:exported="false" />
+    <!--Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.-->
+    <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:exported="true" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+    <!--Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.-->
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+</manifest>
