@@ -90,21 +90,17 @@
           "lib/netstandard1.5/Grpc.Auth.dll": {}
         }
       },
-      "Grpc.Core/1.19.0": {
+      "Grpc.Core/1.21.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "1.19.0",
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0",
-          "System.Runtime.Loader": "4.0.0",
-          "System.Threading.Thread": "4.0.0",
-          "System.Threading.ThreadPool": "4.0.10"
+          "Grpc.Core.Api": "1.21.0",
+          "System.Interactive.Async": "3.2.0"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "build": {
           "build/Xamarin.iOS10/Grpc.Core.targets": {}
@@ -136,17 +132,17 @@
           }
         }
       },
-      "Grpc.Core.Api/1.19.0": {
+      "Grpc.Core.Api/1.21.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0"
+          "System.Interactive.Async": "3.2.0",
+          "System.Memory": "4.5.2"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         }
       },
       "Microsoft.Bcl/1.1.10": {
@@ -335,6 +331,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "compile": {
@@ -492,6 +497,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Memory/4.5.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -586,6 +604,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "type": "package",
         "compile": {
@@ -630,15 +657,6 @@
             "assetType": "runtime",
             "rid": "win"
           }
-        }
-      },
-      "System.Runtime.Loader/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.5/System.Runtime.Loader.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -757,24 +775,6 @@
         }
       },
       "System.Threading.Tasks/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.Thread/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.ThreadPool/4.0.10": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1207,21 +1207,17 @@
           "lib/netstandard1.5/Grpc.Auth.dll": {}
         }
       },
-      "Grpc.Core/1.19.0": {
+      "Grpc.Core/1.21.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "1.19.0",
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0",
-          "System.Runtime.Loader": "4.0.0",
-          "System.Threading.Thread": "4.0.0",
-          "System.Threading.ThreadPool": "4.0.10"
+          "Grpc.Core.Api": "1.21.0",
+          "System.Interactive.Async": "3.2.0"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "native": {
           "runtimes/win/native/grpc_csharp_ext.x64.dll": {},
@@ -1231,17 +1227,17 @@
           "build/Xamarin.iOS10/Grpc.Core.targets": {}
         }
       },
-      "Grpc.Core.Api/1.19.0": {
+      "Grpc.Core.Api/1.21.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0"
+          "System.Interactive.Async": "3.2.0",
+          "System.Memory": "4.5.2"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         }
       },
       "Microsoft.Bcl/1.1.10": {
@@ -1430,6 +1426,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "compile": {
@@ -1577,6 +1582,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Memory/4.5.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1661,6 +1679,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "type": "package",
         "compile": {
@@ -1695,15 +1722,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        }
-      },
-      "System.Runtime.Loader/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.5/System.Runtime.Loader.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -1788,24 +1806,6 @@
         }
       },
       "System.Threading.Tasks/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.Thread/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.ThreadPool/4.0.10": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -2238,21 +2238,17 @@
           "lib/netstandard1.5/Grpc.Auth.dll": {}
         }
       },
-      "Grpc.Core/1.19.0": {
+      "Grpc.Core/1.21.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "1.19.0",
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0",
-          "System.Runtime.Loader": "4.0.0",
-          "System.Threading.Thread": "4.0.0",
-          "System.Threading.ThreadPool": "4.0.10"
+          "Grpc.Core.Api": "1.21.0",
+          "System.Interactive.Async": "3.2.0"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "native": {
           "runtimes/win/native/grpc_csharp_ext.x64.dll": {},
@@ -2262,17 +2258,17 @@
           "build/Xamarin.iOS10/Grpc.Core.targets": {}
         }
       },
-      "Grpc.Core.Api/1.19.0": {
+      "Grpc.Core.Api/1.21.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0"
+          "System.Interactive.Async": "3.2.0",
+          "System.Memory": "4.5.2"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         }
       },
       "Microsoft.Bcl/1.1.10": {
@@ -2461,6 +2457,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "compile": {
@@ -2608,6 +2613,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Memory/4.5.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -2692,6 +2710,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "type": "package",
         "compile": {
@@ -2726,15 +2753,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        }
-      },
-      "System.Runtime.Loader/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.5/System.Runtime.Loader.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -2819,24 +2837,6 @@
         }
       },
       "System.Threading.Tasks/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.Thread/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.ThreadPool/4.0.10": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -3269,21 +3269,17 @@
           "lib/netstandard1.5/Grpc.Auth.dll": {}
         }
       },
-      "Grpc.Core/1.19.0": {
+      "Grpc.Core/1.21.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "1.19.0",
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0",
-          "System.Runtime.Loader": "4.0.0",
-          "System.Threading.Thread": "4.0.0",
-          "System.Threading.ThreadPool": "4.0.10"
+          "Grpc.Core.Api": "1.21.0",
+          "System.Interactive.Async": "3.2.0"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.dll": {}
+          "lib/netstandard2.0/Grpc.Core.dll": {}
         },
         "native": {
           "runtimes/win/native/grpc_csharp_ext.x64.dll": {},
@@ -3293,17 +3289,17 @@
           "build/Xamarin.iOS10/Grpc.Core.targets": {}
         }
       },
-      "Grpc.Core.Api/1.19.0": {
+      "Grpc.Core.Api/1.21.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Interactive.Async": "3.2.0"
+          "System.Interactive.Async": "3.2.0",
+          "System.Memory": "4.5.2"
         },
         "compile": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Grpc.Core.Api.dll": {}
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {}
         }
       },
       "Microsoft.Bcl/1.1.10": {
@@ -3492,6 +3488,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "compile": {
@@ -3639,6 +3644,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Memory/4.5.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -3723,6 +3741,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "type": "package",
         "compile": {
@@ -3757,15 +3784,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        }
-      },
-      "System.Runtime.Loader/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.5/System.Runtime.Loader.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -3850,24 +3868,6 @@
         }
       },
       "System.Threading.Tasks/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.Thread/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/xamarinios10/_._": {}
-        },
-        "runtime": {
-          "lib/xamarinios10/_._": {}
-        }
-      },
-      "System.Threading.ThreadPool/4.0.10": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -4346,16 +4346,16 @@
         "lib/netstandard1.5/Grpc.Auth.xml"
       ]
     },
-    "Grpc.Core/1.19.0": {
-      "sha512": "gqOrUiRKbSfRU8FySvvTr+04mliwQdimirfloBYjiHw5HhwBpYUown8NgEoki1G3iYUuymg6RrB1nXwx8wz54g==",
+    "Grpc.Core/1.21.0": {
+      "sha512": "dYaUng5xyWS5BMSU1pYu6aH+yRokrM6U3QiB0PMch609IQi1rBRZuCRA0YsK93GDp0nihLoR6SyirGCWfsr3EA==",
       "type": "package",
-      "path": "grpc.core/1.19.0",
+      "path": "grpc.core/1.21.0",
       "files": [
         ".signature.p7s",
         "build/MonoAndroid10/Grpc.Core.targets",
         "build/Xamarin.iOS10/Grpc.Core.targets",
         "build/net45/Grpc.Core.targets",
-        "grpc.core.1.19.0.nupkg.sha512",
+        "grpc.core.1.21.0.nupkg.sha512",
         "grpc.core.nuspec",
         "lib/net45/Grpc.Core.dll",
         "lib/net45/Grpc.Core.pdb",
@@ -4363,6 +4363,9 @@
         "lib/netstandard1.5/Grpc.Core.dll",
         "lib/netstandard1.5/Grpc.Core.pdb",
         "lib/netstandard1.5/Grpc.Core.xml",
+        "lib/netstandard2.0/Grpc.Core.dll",
+        "lib/netstandard2.0/Grpc.Core.pdb",
+        "lib/netstandard2.0/Grpc.Core.xml",
         "native/android/arm64-v8a/libgrpc_csharp_ext.so",
         "native/android/armeabi-v7a/libgrpc_csharp_ext.so",
         "native/android/x86/libgrpc_csharp_ext.so",
@@ -4376,20 +4379,23 @@
         "runtimes/win/native/grpc_csharp_ext.x86.dll"
       ]
     },
-    "Grpc.Core.Api/1.19.0": {
-      "sha512": "f+4Bkzr+MxKqyxqR4rQSOB3gdRspTmrV7NcdrgMbUY7qeFDF3Hfnuop3xIpTuNdRaQLgopiTvo1+lHyHpuEZLQ==",
+    "Grpc.Core.Api/1.21.0": {
+      "sha512": "3o48U+9l3Uaxo6gzdBaCpNJ4leiimCeIXpY2/XSYzLME+OW41W3l7rJJxhPtnaYQZd4AvKQugIS98kPBkjivrw==",
       "type": "package",
-      "path": "grpc.core.api/1.19.0",
+      "path": "grpc.core.api/1.21.0",
       "files": [
         ".signature.p7s",
-        "grpc.core.api.1.19.0.nupkg.sha512",
+        "grpc.core.api.1.21.0.nupkg.sha512",
         "grpc.core.api.nuspec",
         "lib/net45/Grpc.Core.Api.dll",
         "lib/net45/Grpc.Core.Api.pdb",
         "lib/net45/Grpc.Core.Api.xml",
         "lib/netstandard1.5/Grpc.Core.Api.dll",
         "lib/netstandard1.5/Grpc.Core.Api.pdb",
-        "lib/netstandard1.5/Grpc.Core.Api.xml"
+        "lib/netstandard1.5/Grpc.Core.Api.xml",
+        "lib/netstandard2.0/Grpc.Core.Api.dll",
+        "lib/netstandard2.0/Grpc.Core.Api.pdb",
+        "lib/netstandard2.0/Grpc.Core.Api.xml"
       ]
     },
     "Microsoft.Bcl/1.1.10": {
@@ -4842,6 +4848,30 @@
         "runtimes/aot/lib/netcore50/System.AppContext.dll",
         "system.appcontext.4.3.0.nupkg.sha512",
         "system.appcontext.nuspec"
+      ]
+    },
+    "System.Buffers/4.4.0": {
+      "sha512": "Ii2bedd4HVzddupdU35n3ygohUPlNn7MDimBOYcwWNce2NizQ1fCSaQJY1Tzv80aMqOGpVcU4wZr/Xe50xcTwg==",
+      "type": "package",
+      "path": "system.buffers/4.4.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.4.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Collections/4.3.0": {
@@ -5753,6 +5783,26 @@
         "system.linq.expressions.nuspec"
       ]
     },
+    "System.Memory/4.5.2": {
+      "sha512": "Ohf9h6em5CjPaAzupGtW/TWMzX6aVfIGPh7bq5KQmfvYJr+DqvOa0cRS9ggFKGIuvKTModCQEacGC/CwE8j7cg==",
+      "type": "package",
+      "path": "system.memory/4.5.2",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.2.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Net.Http/4.3.0": {
       "sha512": "6BBc6BUa7pWFL7KUI/c8wb18IobTZHTtcQKksxJI5F9DRDShdtOvBEJzg5jJbFdTll7gRE+5yXUlq72ciLE+QQ==",
       "type": "package",
@@ -6349,6 +6399,30 @@
         "system.runtime.nuspec"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "hMkdWxksypQlFXB7JamQegDscxEAQO4FHd/lw/zlSZU9dZgAij65xjCrXer183wvoNAzJic5zzjj2oc9/dloWg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Runtime.Extensions/4.3.0": {
       "sha512": "guW0uK0fn5fcJJ1tJVXYd7/1h5F+pea1r7FLSOz/f8vPEqbR2ZAknuRDvTQ8PzAilDveOxNjSfr0CHfIQfFk8g==",
       "type": "package",
@@ -6586,31 +6660,6 @@
         "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
         "system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
         "system.runtime.interopservices.runtimeinformation.nuspec"
-      ]
-    },
-    "System.Runtime.Loader/4.0.0": {
-      "sha512": "AGWrywLI2B15/dnLuFnlHWFjXmq1Tl0kjWaKTHbaJ8T9kIxiQ8YGTtiMQc8rUr49l2JjfZa7QY0KKqlyzA7NNg==",
-      "type": "package",
-      "path": "system.runtime.loader/4.0.0",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/net462/_._",
-        "lib/netstandard1.5/System.Runtime.Loader.dll",
-        "ref/netstandard1.5/System.Runtime.Loader.dll",
-        "ref/netstandard1.5/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/de/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/es/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/fr/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/it/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ja/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ko/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ru/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/zh-hans/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/zh-hant/System.Runtime.Loader.xml",
-        "system.runtime.loader.4.0.0.nupkg.sha512",
-        "system.runtime.loader.nuspec"
       ]
     },
     "System.Runtime.Numerics/4.3.0": {
@@ -7174,84 +7223,6 @@
         "ref/xamarinwatchos10/_._",
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
-      ]
-    },
-    "System.Threading.Thread/4.0.0": {
-      "sha512": "nuUpkup2FbB4Xf62nwWARtm1wQ457fEyR9KvLsCzBSj1yQTtKuqmlSgw/e6aiwB3CiUEAUbZ1IgEvza/m2SYxA==",
-      "type": "package",
-      "path": "system.threading.thread/4.0.0",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Threading.Thread.dll",
-        "lib/netcore50/_._",
-        "lib/netstandard1.3/System.Threading.Thread.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Threading.Thread.dll",
-        "ref/netstandard1.3/System.Threading.Thread.dll",
-        "ref/netstandard1.3/System.Threading.Thread.xml",
-        "ref/netstandard1.3/de/System.Threading.Thread.xml",
-        "ref/netstandard1.3/es/System.Threading.Thread.xml",
-        "ref/netstandard1.3/fr/System.Threading.Thread.xml",
-        "ref/netstandard1.3/it/System.Threading.Thread.xml",
-        "ref/netstandard1.3/ja/System.Threading.Thread.xml",
-        "ref/netstandard1.3/ko/System.Threading.Thread.xml",
-        "ref/netstandard1.3/ru/System.Threading.Thread.xml",
-        "ref/netstandard1.3/zh-hans/System.Threading.Thread.xml",
-        "ref/netstandard1.3/zh-hant/System.Threading.Thread.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.threading.thread.4.0.0.nupkg.sha512",
-        "system.threading.thread.nuspec"
-      ]
-    },
-    "System.Threading.ThreadPool/4.0.10": {
-      "sha512": "dupLOpVBSXb3G/Ab9utLVbOYxZ+hnq5ExVz6Dk9CBlzXm6Znw1GAIOv5HEjlkECZJz40I8zhhxaJHWVsWO484Q==",
-      "type": "package",
-      "path": "system.threading.threadpool/4.0.10",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Threading.ThreadPool.dll",
-        "lib/netcore50/_._",
-        "lib/netstandard1.3/System.Threading.ThreadPool.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Threading.ThreadPool.dll",
-        "ref/netstandard1.3/System.Threading.ThreadPool.dll",
-        "ref/netstandard1.3/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/de/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/es/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/fr/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/it/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/ja/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/ko/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/ru/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/zh-hans/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/zh-hant/System.Threading.ThreadPool.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.threading.threadpool.4.0.10.nupkg.sha512",
-        "system.threading.threadpool.nuspec"
       ]
     },
     "System.Threading.Timer/4.3.0": {
@@ -7962,6 +7933,7 @@
       "Google.Apis.Calendar.v3 >= 1.38.2.1559",
       "Google.Protobuf >= 3.7.0",
       "Grpc.Auth >= 1.19.0",
+      "Grpc.Core >= 1.21.0",
       "Microsoft.Net.Http >= 2.2.29",
       "Newtonsoft.Json >= 12.0.2-beta1",
       "Plugin.GoogleClient >= 1.1.0",
@@ -7983,11 +7955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jafio\\Google Drive\\Briefing\\Briefing\\Briefing.iOS\\Briefing.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\jafio\\Documents\\Briefly\\Briefing\\Briefing.iOS\\Briefing.iOS.csproj",
       "projectName": "Briefing.iOS",
-      "projectPath": "C:\\Users\\jafio\\Google Drive\\Briefing\\Briefing\\Briefing.iOS\\Briefing.iOS.csproj",
+      "projectPath": "C:\\Users\\jafio\\Documents\\Briefly\\Briefing\\Briefing.iOS\\Briefing.iOS.csproj",
       "packagesPath": "C:\\Users\\jafio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jafio\\Google Drive\\Briefing\\Briefing\\Briefing.iOS\\obj\\",
+      "outputPath": "C:\\Users\\jafio\\Documents\\Briefly\\Briefing\\Briefing.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -8025,6 +7997,10 @@
           "Grpc.Auth": {
             "target": "Package",
             "version": "[1.19.0, )"
+          },
+          "Grpc.Core": {
+            "target": "Package",
+            "version": "[1.21.0, )"
           },
           "Microsoft.Net.Http": {
             "target": "Package",

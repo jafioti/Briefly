@@ -34,6 +34,6 @@
     <Import Project="$(NuGetPackageRoot)xamarin.googleplayservices.auth\60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Auth.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.googleplayservices.auth\60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Auth.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.firebase.common\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Common.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.common\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Common.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.firebase.iid\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Iid.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.iid\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Iid.targets')" />
-    <Import Project="$(NuGetPackageRoot)grpc.core\1.19.0\build\MonoAndroid10\Grpc.Core.targets" Condition="Exists('$(NuGetPackageRoot)grpc.core\1.19.0\build\MonoAndroid10\Grpc.Core.targets')" />
+    <Import Project="$(NuGetPackageRoot)grpc.core\1.21.0\build\MonoAndroid10\Grpc.Core.targets" Condition="Exists('$(NuGetPackageRoot)grpc.core\1.21.0\build\MonoAndroid10\Grpc.Core.targets')" />
   </ImportGroup>
 </Project>
